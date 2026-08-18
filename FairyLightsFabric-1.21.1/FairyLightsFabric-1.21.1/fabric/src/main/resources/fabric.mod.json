@@ -1,0 +1,57 @@
+{
+    "schemaVersion": 1,
+    "id": "${mod_id}",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${description}",
+    "authors": [
+        "${mod_author}"
+    ],
+    "contact": {
+        "homepage": "https://fabricmc.net/",
+        "sources": "https://github.com/FabricMC/fabric-example-mod"
+    },
+    "license": "${license}",
+    "icon": "assets/fairylights/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+          "de.lucalabs.fairylights.FairyLights"
+        ],
+        "client": [
+            "de.lucalabs.fairylights.client.FairyLightsClient"
+        ],
+        "cardinal-components": [
+            "de.lucalabs.fairylights.main.components.FairyLightComponents"
+        ],
+        "emi": [
+            "de.lucalabs.fairylights.integrations.emi.FairyLightEmiPlugin"
+        ],
+        "jei_mod_plugin": [
+            "de.lucalabs.fairylights.integrations.jei.FairyLightJeiPlugin"
+        ],
+        "fabric-datagen": [
+            "de.lucalabs.fairylights.client.FairyLightsDataGenerator"
+        ]
+    },
+    "mixins": [
+        "fairylights.mixins.json"
+    ],
+    "custom": {
+        "cardinal-components": [
+            "fairylights:fastener",
+            "fairylights:light_variant"
+        ]
+    },
+    "accessWidener": "fairylights.accesswidener",
+    "depends": {
+        "fabricloader": ">=${fabric_loader_version}",
+        "fabric-api": "*",
+        "minecraft": "${minecraft_version}",
+        "java": ">=${java_version}"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
+}
+  
